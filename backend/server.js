@@ -194,8 +194,6 @@ fastify.post('/resume/upload', async (request, reply) => {
     const searchQueries = typeof extraction === 'string' ? [extraction] : (extraction.queries || [extraction.query]);
     const extractedSkills = typeof extraction === 'string' ? [extraction] : extraction.skills;
     
-    console.log(`Deep Matching Triggered - Extracted Titles: ${JSON.stringify(searchQueries)}`);
-    
     // 2. Fetch specific jobs targeted ONLY for this user's skills!
     const updatedJobs = await syncAllJobs(searchQueries);
     

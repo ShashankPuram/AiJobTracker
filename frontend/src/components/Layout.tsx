@@ -23,18 +23,15 @@ export default function Layout() {
 
   useEffect(() => {
     const handleReturn = () => {
-      console.log("[Global Tracking] Event fired. visibilityState:", document.visibilityState, "hasFocus:", document.hasFocus());
       
       const storedJobStr = localStorage.getItem('pendingTrackingJob');
       if (storedJobStr) {
-        console.log("[Global Tracking] Found stored job context in localStorage:", storedJobStr);
         try {
           const storedJob = JSON.parse(storedJobStr);
           // Wait 400ms to ensure React completely paints the screen
           setTimeout(() => {
             setPendingJob(storedJob);
             localStorage.removeItem('pendingTrackingJob');
-            console.log("[Global Tracking] Popup triggered successfully!");
           }, 400);
         } catch(e) {
           console.error("Error parsing stored job", e);

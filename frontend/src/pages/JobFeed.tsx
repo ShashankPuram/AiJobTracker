@@ -65,7 +65,7 @@ export default function JobFeed() {
         </div>
         <h2 className="text-3xl font-black text-white tracking-tight mb-3">Resume Required</h2>
         <p className="text-[#A1A1AA] mb-8 max-w-lg text-[15px] font-medium leading-relaxed">
-          Job listings will not be displayed until your resume is securely processed. Our AI requires your document to precisely extract your skills and dynamically curate your job feed!
+          Job listings will not be displayed until your resume is securely processed. AI JobTracker requires your document to precisely extract your skills and dynamically curate your job feed!
         </p>
         <Link to="/resume" className="px-8 py-3.5 bg-[#EF4444] hover:bg-[#DC2626] text-white font-bold tracking-wide rounded-[12px] transition-all shadow-[0_0_15px_rgba(239,68,68,0.25)] flex items-center gap-2 hover:-translate-y-0.5">
           Upload Resume Now
@@ -149,9 +149,9 @@ export default function JobFeed() {
             </select>
           </div>
 
-          {/* AI Match Score Range */}
+          {/* AI JobTracker Match Score Range */}
           <div>
-            <label className="text-xs font-bold text-[#6B7280] uppercase tracking-wider block mb-2">AI Match Score (%)</label>
+            <label className="text-xs font-bold text-[#6B7280] uppercase tracking-wider block mb-2">AI JobTracker Score (%)</label>
             <div className="flex items-center gap-2">
               <input 
                 type="number" 
@@ -213,7 +213,7 @@ export default function JobFeed() {
         <div className="flex justify-between items-end mb-6 animate-slide-up">
            <div>
              <h1 className="text-3xl font-bold text-white tracking-tight">Curated Matches</h1>
-             <p className="text-[#A1A1AA] text-[15px] mt-1.5 font-medium">Dynamically sorted with AI resume intelligence.</p>
+             <p className="text-[#A1A1AA] text-[15px] mt-1.5 font-medium">Powered by AI JobTracker intelligence.</p>
            </div>
            <div className="text-sm font-bold text-[#EF4444] bg-[#EF4444]/10 px-4 py-1.5 rounded-full shadow-sm border border-[#EF4444]/20">
              {jobs.length} Results
@@ -356,7 +356,6 @@ function JobCard({ job }: { job: Job }) {
            target="_blank" 
            rel="noopener noreferrer"
            onClick={() => {
-             console.log("[JobCard] Setting localStorage tracking for:", job.title);
              localStorage.setItem('pendingTrackingJob', JSON.stringify(job));
            }}
            className="flex items-center gap-1.5 px-4 py-2 bg-[#EF4444] hover:bg-[#DC2626] text-white text-[13px] font-bold rounded-[8px] transition-all duration-300 ease-in-out shadow-[0_0_15px_rgba(239,68,68,0.25)] group-hover:shadow-[0_0_20px_rgba(239,68,68,0.6)] hover:-translate-y-0.5"

@@ -40,8 +40,8 @@ export default function Login() {
         <div className="w-16 h-16 bg-[#1A1A1A] border border-[#1F1F1F] text-[#EF4444] rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-inner">
           <Briefcase className="w-8 h-8" />
         </div>
-        <h1 className="text-2xl font-black text-white text-center tracking-tight mb-2">Welcome Back</h1>
-        <p className="text-[#A1A1AA] text-center mb-8 text-sm font-medium">Log in to access your curated AI matches.</p>
+        <h2 className="text-4xl font-bold text-white text-center tracking-tight mb-2">Welcome Back</h2>
+        <p className="text-[#A1A1AA] text-center mb-8 text-sm font-medium">Log in to access your curated AI JobTracker matches.</p>
 
         {error && (
           <div className="mb-6 p-4 bg-[#EF4444]/10 border border-[#EF4444]/20 rounded-xl flex items-start gap-3">

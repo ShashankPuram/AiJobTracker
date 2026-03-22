@@ -48,8 +48,8 @@ export default function Applications() {
     <div className="flex-1 p-8 font-sans overflow-y-auto relative">
       <div className="flex justify-between items-end mb-8">
          <div>
-           <h1 className="text-3xl font-black text-white tracking-tight">Application Board</h1>
-           <p className="text-[#A1A1AA] font-medium mt-1">Track and update your active pipeline below.</p>
+           <h1 className="text-3xl font-black text-white tracking-tight">Your Applications</h1>
+           <p className="text-[#A1A1AA] font-medium mt-1">Track and manage your job applications</p>
          </div>
          <div className="flex gap-4 items-center">
            {['Applied', 'Interview', 'Offer', 'Rejected'].map(status => (

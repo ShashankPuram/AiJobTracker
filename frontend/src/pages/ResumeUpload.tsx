@@ -67,7 +67,7 @@ export default function ResumeUpload() {
       <div className="text-center mb-8">
         <h1 className="text-3xl font-bold text-white mb-3">Optimize Your Job Matches</h1>
         <p className="text-[#A1A1AA] max-w-lg mx-auto">
-          Upload your resume and let our AI analyze your skills, experience, and timeline to find your perfect role.
+          Upload your resume and let AI JobTracker analyze your skills, experience, and timeline to find your perfect role.
         </p>
       </div>
 
@@ -122,7 +122,7 @@ export default function ResumeUpload() {
             <CheckCircle className="w-10 h-10" />
           </div>
           <h3 className="text-2xl font-bold text-white mb-2">Resume Analyzed!</h3>
-          <p className="text-[#A1A1AA] mb-6">Our AI extracted {result?.extractedSkillsMock?.length || 0} core skills from {result?.extractedTextLength} characters.</p>
+          <p className="text-[#A1A1AA] mb-6">AI JobTracker extracted {result?.extractedSkillsMock?.length || 0} core skills from {result?.extractedTextLength} characters.</p>
           
           <div className="bg-[#1A1A1A] p-4 rounded-xl flex items-center gap-4 text-left max-w-md mx-auto mb-8 border border-[#1F1F1F]">
             <div className="w-12 h-12 bg-[#EF4444]/10 border border-[#EF4444]/20 text-[#EF4444] flex items-center justify-center rounded-lg">

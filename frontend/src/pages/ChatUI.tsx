@@ -9,7 +9,7 @@ interface Message {
 
 export default function ChatUI() {
   const [messages, setMessages] = useState<Message[]>([
-    { role: 'assistant', content: "Hello! I'm your AI Job Assistant powered by LangGraph. Type a message to ask about filtering jobs or clearing filters!" },
+    { role: 'assistant', content: "Hello! I'm your AI JobTracker Assistant powered by LangGraph. Type a message to ask about filtering jobs or clearing filters!" },
   ]);
   const [inputValue, setInputValue] = useState("");
   const { setTypes, setLocations, clearFilters } = useFilterStore();
