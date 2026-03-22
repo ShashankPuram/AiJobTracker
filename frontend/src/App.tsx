@@ -11,6 +11,19 @@ import { useApplicationStore } from "./store/useApplicationStore";
 
 import { useState, useEffect } from "react";
 
+function NotFound() {
+  return (
+    <div className="min-h-screen bg-[#0B0B0B] flex flex-col items-center justify-center p-4 font-sans text-white text-center">
+      <h1 className="text-6xl font-black text-[#EF4444] mb-4">404</h1>
+      <h2 className="text-2xl font-bold mb-2">Page Not Found</h2>
+      <p className="text-[#A1A1AA] mb-8 font-medium">The page you're looking for doesn't exist or has been moved.</p>
+      <a href="/" className="px-6 py-3 bg-[#EF4444] hover:bg-[#DC2626] rounded-xl font-bold shadow-lg transition-transform hover:-translate-y-0.5">
+        Return Home
+      </a>
+    </div>
+  );
+}
+
 function ProtectedRoute() {
   const [isMounted, setIsMounted] = useState(false);
   const isAuthenticated = useAuthStore(state => state.isAuthenticated);
@@ -69,6 +82,9 @@ function App() {
             <Route path="chat" element={<ChatUI />} />
           </Route>
         </Route>
+        
+        {/* Fallback 404 Route */}
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </Router>
   );
