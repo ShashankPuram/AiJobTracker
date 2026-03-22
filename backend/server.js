@@ -241,8 +241,11 @@ fastify.post('/chat', async (request, reply) => {
 
 const start = async () => {
   try {
-    await fastify.listen({ port: 3001, host: '::' });
-    console.log('Backend server is running at http://localhost:3001');
+    await fastify.listen({ 
+      port: process.env.PORT || 3001, 
+      host: '0.0.0.0' 
+    });
+    console.log(`Backend server is running at http://localhost:${process.env.PORT || 3001}`);
     // Pre-populate generic jobs on boot prior to resume upload
     await syncAllJobs();
     console.log('Jobs successfully pre-fetched and normalized into API.');
