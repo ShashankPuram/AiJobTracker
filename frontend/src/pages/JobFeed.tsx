@@ -30,7 +30,7 @@ export default function JobFeed() {
         if ((selectedLocations || []).length > 0) queryParams.set('location', (selectedLocations || []).join(','));
         if (city) queryParams.set('city', city);
         
-        const res = await fetch(`http://localhost:3001/jobs?${queryParams.toString()}`);
+        const res = await fetch(`${import.meta.env.VITE_API_URL || "http://localhost:3001"}/jobs?${queryParams.toString()}`);
         const payload = await res.json();
         if (payload.data && Array.isArray(payload.data)) {
            setJobs(payload.data, payload.isFallback || false);

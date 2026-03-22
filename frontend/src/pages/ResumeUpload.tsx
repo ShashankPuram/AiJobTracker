@@ -27,7 +27,7 @@ export default function ResumeUpload() {
 
     try {
       const email = useAuthStore.getState().userEmail;
-      const res = await fetch("http://localhost:3001/resume/upload", {
+      const res = await fetch(`${import.meta.env.VITE_API_URL || "http://localhost:3001"}/resume/upload`, {
         method: "POST",
         headers: email ? { "x-user-email": email } : {},
         body: formData,

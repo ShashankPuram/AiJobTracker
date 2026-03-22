@@ -48,7 +48,7 @@ export default function AIAssistant() {
         city: filterStore.city
       };
 
-      const res = await fetch('http://localhost:3001/api/chat', {
+      const res = await fetch(`${import.meta.env.VITE_API_URL || "http://localhost:3001"}/api/chat`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({

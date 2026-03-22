@@ -27,7 +27,7 @@ function ProtectedRoute() {
         return;
       }
       try {
-        const res = await fetch("http://localhost:3001/auth/me", {
+        const res = await fetch(`${import.meta.env.VITE_API_URL || "http://localhost:3001"}/auth/me`, {
           headers: { "x-user-email": userEmail }
         });
         if (!res.ok) throw new Error("Unauthorized");

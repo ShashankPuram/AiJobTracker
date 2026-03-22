@@ -13,7 +13,10 @@ import Fuse from 'fuse.js';
 
 const fastify = Fastify({ logger: true });
 
-await fastify.register(cors, { origin: '*' });
+await fastify.register(cors, { 
+  origin: '*',
+  methods: ['GET', 'POST', 'PUT', 'DELETE']
+});
 await fastify.register(multipart);
 
 fastify.get('/', async () => {
