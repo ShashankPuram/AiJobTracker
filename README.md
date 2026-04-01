@@ -1,4 +1,5 @@
 # 🚀 AI JobTracker
+Try the app here https://ai-job-tracker-theta.vercel.app/
 
 An intelligent job tracking and recommendation platform powered by AI.
 It helps users discover relevant jobs, track applications, and interact with a smart assistant that understands natural language.
